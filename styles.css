@@ -1,4 +1,5 @@
 /* styles.css */
+@import "{{ site.theme }}";
 
 /* Global styles */
 body {
