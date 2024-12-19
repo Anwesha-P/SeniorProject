@@ -1,58 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Senior Project</title>
+        <style>
+            /* General styling */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
 
-<body>
-    <div class="container">
-        <h1>Netlog Mining for Speedtest-based Internet Performance Measurement</h1>
+            body {
+                background-color: #f0f4f8;
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+            }
 
-        <nav>
-            <a href="#vision">Project Vision</a>
-            <a href="#team">Our Team</a>
-            <a href="#resources">Project Resources</a>
-        </nav>
+            .container {
+                max-width: 900px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: left;
+            }
 
-        <section id="vision">
+            h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: #274094;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: #4a4a4a;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                color: #555;
+            }
+
+            /* Lists */
+            ul {
+                text-align: left;
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+
+            li {
+                margin-bottom: 8px;
+                font-size: 16px;
+                color: #333;
+            }
+
+            /* Links */
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* Media Queries for Responsiveness */
+            @media (max-width: 768px) {
+                .destination {
+                    flex-basis: calc(50% - 20px);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .destination {
+                    flex-basis: 100%;
+                }
+
+                h1 {
+                    font-size: 28px;
+                }
+
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <h1>Netlog mining for speedtest-based Internet performance measurement</h1>
             <h3>Project Vision</h3>
-            <p>There are multiple speed test platforms that provide web-based tools for end-users to evaluate their Internet performance. However, existing speed test platforms operate with varying methodologies, leading to inconsistent results and hindering efforts to standardize internet performance assessment.</p>
-            <p>Our project focuses on leveraging CAIDA's RABBITS toolkit—designed for Reproducible Assessment of BroadBand Internet Topology and Speed—to streamline and standardize data collected from diverse speed test platforms.</p>
-        </section>
-
-        <section id="team">
-            <h3>Our Team</h3>
-            <ul>
-                <li>Aishwarya Joshi</li>
-                <li>Anwesha Pradhananga</li>
-            </ul>
-            <h3>Advisors</h3>
-            <ul>
-                <li>Professor Rocky Chang</li>
-                <li>Dr. Ricky Mok (CAIDA)</li>
-            </ul>
-        </section>
-
-        <section id="resources">
-            <h3>Project Resources</h3>
-            <ul>
-                <li><a href="https://computing.calvin.edu/" target="_blank">Department of Computer Science</a></li>
-                <li><a href="https://docs.google.com/document/d/12_5gxMTtx1vqJiPdmUcfD0o_Zbu7SSzae7VhaJJ2C5M/edit?usp=sharing" target="_blank">Project Proposal - Mid Year</a></li>
-                <li><a href="Senior_Project.pdf" target="_blank">Project Final Report</a></li>
-                <li><a href="https://github.com/Anwesha-P/carrots" target="_blank">Code Base - GitHub URL</a></li>
-                <li><a href="https://docs.google.com/presentation/d/11_H9djORyscyZ_V-diFL25Jr5z89jzaFJuaBxk1TSXY/edit?usp=sharing" target="_blank">Project Presentation</a></li>
-                <li><a href="https://www.caida.org/funding/cns-rabbits/" target="_blank">CAIDA RABBITS Toolkit</a></li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>© 2024 Senior Project | All rights reserved</p>
-        </footer>
-    </div>
-</body>
-
+            <p>There are multiple speed test platforms that provide web-based tools for end-users to evaluate their Internet performance. However, existing speed test platforms operate with varying methodologies, leading to inconsistent results and hindering efforts to standardize internet performance assessment. Our project is part of a broader initiative aimed at establishing a standardized framework for assessing internet speed and reliability. Leveraging CAIDA's RABBITS toolkit—designed for Reproducible Assessment of BroadBand Internet Topology and Speed—we focus on developing an analysis component to streamline and standardize data collected from diverse speed test platforms.</p>
+            <p>The RABBITS toolkit provides a flexible, open-source solution for configuring measurement parameters such as the number of concurrent measurement flows, the size of HTTP transactions, and server selection, thereby enabling a standardized approach to internet performance assessment across different platforms. By harmonizing measurement methodologies, we aim to provide policymakers and researchers with consistent, comparable data essential for ensuring equitable access to high-quality internet services. </p>
+            <p>Our analysis component comprises a script tailored to extract and filter data from the netlog files generated by speed test servers. This data, detailing data flow and byte consumption over time, serves as the foundation for calculating key metrics like throughput and latency. Through this standardized approach, we endeavor to empower stakeholders with reliable insights into internet performance, facilitating informed decision-making and resource allocation in the digital age.</p>
+           <h3> Our Team </h3>
+           <p> 
+               <ul>
+                    <li> Aishwarya Joshi</li>
+                    <li> Anwesha Pradhananga</li>
+               </ul>
+           </p>
+           <h3> Advisors </h3>
+             <p> 
+                    <ul> 
+                        <li>Professor Rocky Chang</li>
+                        <li> Dr. Ricky Mok (CAIDA)</li>
+                    </ul>
+            </p>
+            <h3> Project Resources</h3>
+            <p> 
+                <ul> 
+                    <li><a href="https://computing.calvin.edu/" target="_blank">Department of Computer Science</a></li>
+                    <li><a href="https://docs.google.com/document/d/12_5gxMTtx1vqJiPdmUcfD0o_Zbu7SSzae7VhaJJ2C5M/edit?usp=sharing" target="_blank">Project Proposol - Mid Year</a></li>
+                    <li><a href="Senior_Project.pdf" target="_blank"> Project Final Report </a></li>
+                    <li><a href="https://github.com/Anwesha-P/carrots" target="_blank">Code Base - Github URL </a></li>
+                    <li><a href="https://docs.google.com/presentation/d/11_H9djORyscyZ_V-diFL25Jr5z89jzaFJuaBxk1TSXY/edit?usp=sharing" target="_blank">Project Presentation</a></li>
+                    <li><a href="https://www.caida.org/funding/cns-rabbits/" target="_blank">CAIDA RABBITS Toolkit</a></li>
+                </ul>
+        </div>
+    </body>
 </html>
